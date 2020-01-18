@@ -40,3 +40,4 @@ var generate = function(){
 }
 
 submitButton.addEventListener("click", generate)
+
