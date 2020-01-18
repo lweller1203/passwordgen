@@ -1,5 +1,4 @@
 var submitButton = document.getElementById("submit")
-
 var usableSpecial = ["!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`"]
 var usableNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 var usableLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -34,9 +33,14 @@ var generate = function () {
         if (upperChar == true) {
             finalPass = finalPass + usableUpperCase[Math.floor(Math.random() * usableUpperCase.length)]; i++
         }
+        if (specialChar == false && numericChar == false && lowerChar == false && upperChar == false){
+            alert("You must select an option!");
+            passLength = 0;
+        }
         console.log(finalPass)
     }
     document.getElementById("pw").innerHTML = finalPass
     document.getElementById("pass").style.opacity = 1
 }
+
 submitButton.addEventListener("click", generate)
