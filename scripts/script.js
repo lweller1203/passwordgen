@@ -19,6 +19,8 @@ var generate = function () {
         alert("Password must be more than 8 characters!"); passLength = 0
     } else if (passLength > 128) {
         alert("Password cannot be more than 128 characters!"); passLength = 0
+    } else if (passLength == "") {
+        alert ("Please enter a number!); passLength = 0
     }
     while (i < passLength) {
         if (specialChar == true) {
