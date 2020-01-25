@@ -41,8 +41,11 @@ var generate = function () {
         }
         console.log(finalPass)
     }
-    document.getElementById("pw").innerHTML = finalPass
-    document.getElementById("pass").style.opacity = 1
+    if (passLength !== 0){
+        document.getElementById("pw").innerHTML = finalPass
+        document.getElementById("pass").style.opacity = 1
+    }
+    
 }
 
 submitButton.addEventListener("click", generate)
