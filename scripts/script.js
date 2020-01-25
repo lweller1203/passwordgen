@@ -41,9 +41,8 @@ var generate = function () {
         }
         console.log(finalPass)
     }
-    if (passLength !== 0){
-        document.getElementById("pw").innerHTML = finalPass
-        document.getElementById("pass").style.opacity = 1
+    document.getElementById("pw").innerHTML = finalPass
+    document.getElementById("pass").style.opacity = 1
     }
     
 }
